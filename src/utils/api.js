@@ -1,7 +1,7 @@
-export async function getData(endpoint){
-    let data = await fetch(`https://dummyjson.com${endpoint}`).then((res) =>
-      res.json()
-    );
+export async function getData(endpoint) {
+  let data = await fetch(`https://dummyjson.com${endpoint}`, {
+    method: "GET"
+  }).then((res) => res.json());
 
-    return data;
+  return data;
 }

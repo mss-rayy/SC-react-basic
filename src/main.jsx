@@ -8,6 +8,7 @@ import RootLayout from "./components/layouts/root-layout.jsx";
 import NotFound from "./components/layouts/not-found.jsx";
 import ProductDetails from "./pages/product/ProductDetails.jsx";
 import Products from "./pages/product/Products.jsx";
+import { Login } from "./pages/auth/Login.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,8 +18,9 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<App />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetails/>} />
+          <Route path="/products/:id" element={<ProductDetails />} />
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
